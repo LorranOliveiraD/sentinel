@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Calculador de Score de Risco
+// Sentinel — Calculador de Score de Risco
 // ─────────────────────────────────────────────
 // DETERMINÍSTICO — IA não permitida neste módulo
 // ─────────────────────────────────────────────

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Serviço de IA (Gemini)
+// Sentinel — Serviço de IA (Gemini)
 // ─────────────────────────────────────────────
 // ⚠️ RESTRIÇÃO: Este serviço só pode EXPLICAR achados.
 //    Ele NÃO PODE decidir pass/warn/block.
@@ -117,7 +117,7 @@ export async function generateWeeklyReport(
 
 // ── Prompts do Sistema ──
 
-const EXPLANATION_SYSTEM_PROMPT = `Você é o assistente de IA do Sentinel V3. Seu ÚNICO papel é EXPLICAR achados aos desenvolvedores.
+const EXPLANATION_SYSTEM_PROMPT = `Você é o assistente de IA do Sentinel. Seu ÚNICO papel é EXPLICAR achados aos desenvolvedores.
 
 REGRAS CRÍTICAS:
 - Você NÃO PODE e NÃO DEVE decidir se um PR deve ser bloqueado, avisado ou aprovado.
@@ -128,7 +128,7 @@ REGRAS CRÍTICAS:
 - Foque nos problemas mais críticos primeiro.
 - Forneça sugestões específicas de correção quando possível.`;
 
-const REPORT_SYSTEM_PROMPT = `Você é o assistente de IA do Sentinel V3 gerando um relatório semanal de inteligência de engenharia.
+const REPORT_SYSTEM_PROMPT = `Você é o assistente de IA do Sentinel gerando um relatório semanal de inteligência de engenharia.
 
 Seu trabalho é:
 - Resumir as tendências das métricas DORA (frequência de implantação, tempo de lead, taxa de falha de mudança, MTTR)
@@ -148,7 +148,7 @@ function buildExplanationPrompt(
     .sort((a, b) => b.score - a.score)
     .slice(0, 10);
 
-  return `Um Pull Request foi analisado pelo Sentinel V3 e o Motor de Política decidiu **${decision.action.toUpperCase()}** o mesmo.
+  return `Um Pull Request foi analisado pelo Sentinel e o Motor de Política decidiu **${decision.action.toUpperCase()}** o mesmo.
 
 ## Contexto do PR
 - **Título**: ${context.pr.title}

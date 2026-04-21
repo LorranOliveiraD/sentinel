@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Serviço do Motor de Métricas
+// Sentinel — Serviço do Motor de Métricas
 // ─────────────────────────────────────────────
 
 import { createChildLogger } from '../../core/logger.js';

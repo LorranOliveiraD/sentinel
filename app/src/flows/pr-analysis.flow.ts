@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Fluxo de Análise de PR
+// Sentinel — Fluxo de Análise de PR
 // ─────────────────────────────────────────────
 // Orquestra: Webhook → Analisadores → Contexto → Política → Ação
 // ─────────────────────────────────────────────

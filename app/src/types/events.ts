@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Definições de Tipos de Eventos
+// Sentinel — Definições de Tipos de Eventos
 // ─────────────────────────────────────────────
 
 import type { PRAnalysisResult } from './github.js';

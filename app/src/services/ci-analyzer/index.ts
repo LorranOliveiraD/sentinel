@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Serviço Analisador de CI
+// Sentinel — Serviço Analisador de CI
 // ─────────────────────────────────────────────
 
 import { createChildLogger } from '../../core/logger.js';

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Serviço do Bot do Slack
+// Sentinel — Serviço do Bot do Slack
 // ─────────────────────────────────────────────
 
 import { config } from '../../config/index.js';
@@ -189,7 +189,7 @@ function buildBlockAlertBlocks(
   return [
     {
       type: 'header',
-      text: { type: 'plain_text', text: '🚫 PR Bloqueado pelo Sentinel V3' },
+      text: { type: 'plain_text', text: '🚫 PR Bloqueado pelo Sentinel' },
     },
     {
       type: 'section',

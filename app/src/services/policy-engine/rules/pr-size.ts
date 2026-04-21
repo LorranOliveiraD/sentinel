@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Regra de Tamanho de PR
+// Sentinel — Regra de Tamanho de PR
 // ─────────────────────────────────────────────
 // DETERMINÍSTICO — IA não permitida neste módulo
 // ─────────────────────────────────────────────

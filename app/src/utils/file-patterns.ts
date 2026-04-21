@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Padrões de Arquivos Compartilhados
+// Sentinel — Padrões de Arquivos Compartilhados
 // ─────────────────────────────────────────────
 
 /**

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Migração Inicial do Banco de Dados
+// Sentinel — Migração Inicial do Banco de Dados
 // ─────────────────────────────────────────────
 
 import type { Knex } from 'knex';

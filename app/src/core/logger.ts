@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Logger Estruturado (Pino)
+// Sentinel — Logger Estruturado (Pino)
 // ─────────────────────────────────────────────
 
 import pino from 'pino';

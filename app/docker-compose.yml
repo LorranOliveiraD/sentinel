@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────
-# Sentinel V3 — Docker Compose
+# Sentinel — Docker Compose
 # ─────────────────────────────────────────────
 # SEGURANÇA: Todas as credenciais são lidas de variáveis de ambiente.
 # Configure um arquivo .env na mesma pasta com as chaves necessárias.

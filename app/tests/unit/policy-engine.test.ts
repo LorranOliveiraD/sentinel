@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Policy Engine Unit Tests
+// Sentinel — Policy Engine Unit Tests
 // ─────────────────────────────────────────────
 // Verifies: deterministic decisions, rule evaluation, action thresholds
 // ─────────────────────────────────────────────
@@ -524,7 +524,7 @@ describe('Policy Engine — Deterministic Core', () => {
       const input = createCleanInput();
       const decision = evaluatePolicy(input, SENTINEL_RC_DEFAULTS);
 
-      expect(decision.summary).toContain('Sentinel V3');
+      expect(decision.summary).toContain('Sentinel');
       expect(decision.summary).toContain('/100');
     });
 

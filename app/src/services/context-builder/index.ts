@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Serviço Construtor de Contexto
+// Sentinel — Serviço Construtor de Contexto
 // ─────────────────────────────────────────────
 
 import { createChildLogger } from '../../core/logger.js';

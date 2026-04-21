@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Middleware de Validação de Assinatura HMAC
+// Sentinel — Middleware de Validação de Assinatura HMAC
 // ─────────────────────────────────────────────
 
 import crypto from 'node:crypto';

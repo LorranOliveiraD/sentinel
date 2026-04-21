@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Barramento de Eventos Tipado e Assíncrono
+// Sentinel — Barramento de Eventos Tipado e Assíncrono
 // ─────────────────────────────────────────────
 
 import { EventEmitter } from 'node:events';

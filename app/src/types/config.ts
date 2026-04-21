@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Definições de Tipos de Configuração
+// Sentinel — Definições de Tipos de Configuração
 // ─────────────────────────────────────────────
 
 /** Configuração a nível de aplicação (a partir de variáveis de ambiente) */

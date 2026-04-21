@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Definições de Tipos do GitHub
+// Sentinel — Definições de Tipos do GitHub
 // ─────────────────────────────────────────────
 
 /** Resultado da análise do diff do PR */

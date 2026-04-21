@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Regra de Detecção de CVE
+// Sentinel — Regra de Detecção de CVE
 // ─────────────────────────────────────────────
 // DETERMINÍSTICO — IA não permitida neste módulo
 // ─────────────────────────────────────────────

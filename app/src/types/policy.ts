@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Definições de Tipos do Motor de Política
+// Sentinel — Definições de Tipos do Motor de Política
 // ─────────────────────────────────────────────
 
 /** Ações que o Motor de Política pode decidir */

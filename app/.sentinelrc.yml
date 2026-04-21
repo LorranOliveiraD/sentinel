@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────
-# Sentinel V3 — Default Repository Configuration
+# Sentinel — Default Repository Configuration
 # ─────────────────────────────────────────────
 # Place this file at the root of your repository as .sentinelrc.yml
 # to customize Sentinel's behavior for this repo.

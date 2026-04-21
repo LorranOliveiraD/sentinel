@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Ponto de Entrada da Aplicação
+// Sentinel — Ponto de Entrada da Aplicação
 // ─────────────────────────────────────────────
 
 import { createApp } from './server/app.js';
@@ -40,7 +40,7 @@ export function getActiveOps(): number { return activeOperations; }
  */
 async function main(): Promise<void> {
   logger.info('─────────────────────────────────────────────');
-  logger.info('  🛡️  Sentinel V3 — Guardrail Inteligente de PR');
+  logger.info('  🛡️  Sentinel — Guardrail Inteligente de PR');
   logger.info('─────────────────────────────────────────────');
   logger.info({ env: config.nodeEnv, port: config.port }, 'Iniciando...');
 
@@ -71,7 +71,7 @@ async function main(): Promise<void> {
   const server = app.listen(config.port, () => {
     logger.info(
       { port: config.port, env: config.nodeEnv },
-      `🛡️  Sentinel V3 escutando na porta ${config.port}`
+      `🛡️  Sentinel escutando na porta ${config.port}`
     );
     logger.info(`   Saúde:   http://localhost:${config.port}/health`);
     logger.info(`   Webhook: http://localhost:${config.port}/webhook/github`);
@@ -114,7 +114,7 @@ async function main(): Promise<void> {
 
       await closeDatabase();
 
-      logger.info('🛡️  Sentinel V3 desligado graciosamente');
+      logger.info('🛡️  Sentinel desligado graciosamente');
       process.exit(0);
     });
 
@@ -140,6 +140,6 @@ async function main(): Promise<void> {
 }
 
 main().catch((error) => {
-  logger.fatal({ error }, 'Falha ao iniciar o Sentinel V3');
+  logger.fatal({ error }, 'Falha ao iniciar o Sentinel');
   process.exit(1);
 });

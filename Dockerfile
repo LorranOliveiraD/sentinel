@@ -1,5 +1,5 @@
 # ─────────────────────────────────────────────
-# Sentinel V3 — Multi-stage Dockerfile
+# Sentinel — Multi-stage Dockerfile
 # ─────────────────────────────────────────────
 
 # Stage 1: Build

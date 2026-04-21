@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Serviço Analisador de PR
+// Sentinel — Serviço Analisador de PR
 // ─────────────────────────────────────────────
 
 import path from 'node:path';

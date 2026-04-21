@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Regra de Detecção de Segredos
+// Sentinel — Regra de Detecção de Segredos
 // ─────────────────────────────────────────────
 // DETERMINÍSTICO — IA não permitida neste módulo
 // ─────────────────────────────────────────────

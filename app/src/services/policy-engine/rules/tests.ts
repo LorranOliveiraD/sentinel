@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Regra de Cobertura de Testes
+// Sentinel — Regra de Cobertura de Testes
 // ─────────────────────────────────────────────
 // DETERMINÍSTICO — IA não permitida neste módulo
 // ─────────────────────────────────────────────

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Serviço de Integração com o GitHub
+// Sentinel — Serviço de Integração com o GitHub
 // ─────────────────────────────────────────────
 
 import { Octokit } from '@octokit/rest';
@@ -215,7 +215,7 @@ function formatComment(decision: PolicyDecision, aiExplanation?: string): string
   const badge = getRiskBadge(decision.riskScore.total);
 
   let comment = `<!-- sentinel-v3 -->\n`;
-  comment += `## ${emoji} Sentinel V3 — ${decision.action.toUpperCase()}\n\n`;
+  comment += `## ${emoji} Sentinel — ${decision.action.toUpperCase()}\n\n`;
   comment += `${badge}\n\n`;
   comment += `**Score de Risco:** ${decision.riskScore.total}/100\n\n`;
 
@@ -256,7 +256,7 @@ function formatComment(decision: PolicyDecision, aiExplanation?: string): string
 
   // Rodapé
   comment += `---\n`;
-  comment += `*Sentinel V3 — Guardrail Inteligente de PR | ${decision.timestamp}*\n`;
+  comment += `*Sentinel — Guardrail Inteligente de PR | ${decision.timestamp}*\n`;
   comment += `*Override: comente \`/sentinel override <motivo>\` (requer papel de mantenedor)*`;
 
   return comment;

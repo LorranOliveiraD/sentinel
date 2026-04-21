@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Serviço Analisador de Dependências
+// Sentinel — Serviço Analisador de Dependências
 // ─────────────────────────────────────────────
 
 import { createChildLogger } from '../../core/logger.js';

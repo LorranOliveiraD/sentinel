@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Serviço Agendador (Scheduler)
+// Sentinel — Serviço Agendador (Scheduler)
 // ─────────────────────────────────────────────
 
 import cron from 'node-cron';

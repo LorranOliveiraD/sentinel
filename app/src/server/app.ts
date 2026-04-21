@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Configuração da Aplicação Express
+// Sentinel — Configuração da Aplicação Express
 // ─────────────────────────────────────────────
 
 import express from 'express';

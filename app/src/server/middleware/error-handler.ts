@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Middleware Global de Tratamento de Erros
+// Sentinel — Middleware Global de Tratamento de Erros
 // ─────────────────────────────────────────────
 
 import type { Request, Response, NextFunction } from 'express';

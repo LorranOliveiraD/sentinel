@@ -1,13 +1,13 @@
-# 🛡️ Sentinel V3
+# 🛡️ Sentinel
 
 ![Build Status](https://img.shields.io/badge/build-passing-success)
 ![TypeScript](https://img.shields.io/badge/TypeScript-5.x-blue)
 ![Architecture](https://img.shields.io/badge/Architecture-Event--Driven-purple)
 ![Coverage](https://img.shields.io/badge/Coverage-100%25-success)
 
-O **Sentinel V3** é um sistema avançado de *PR Guardrail* (Guarda-Corpo de Pull Requests) e Motor de Inteligência de Engenharia. Ele orquestra análises estáticas determinísticas de código e métricas DORA, aplicando políticas estritas de segurança (ex: bloqueio de *hardcoded secrets* e *CVEs*) de forma autônoma e inflexível.
+O **Sentinel** é um sistema avançado de *PR Guardrail* (Guarda-Corpo de Pull Requests) e Motor de Inteligência de Engenharia. Ele orquestra análises estáticas determinísticas de código e métricas DORA, aplicando políticas estritas de segurança (ex: bloqueio de *hardcoded secrets* e *CVEs*) de forma autônoma e inflexível.
 
-Diferente de bots de IA comuns, o **Sentinel V3 NÃO utiliza IA para tomar decisões de bloqueio ou aprovação**. A Inteligência Artificial (podendo utilizar qualquer LLM, como Gemini, OpenAI ou Claude) é delegada **apenas à camada de apresentação**, atuando como um mentor que traduz logs de infrações técnicos para uma linguagem acessível aos desenvolvedores, melhorando a *Developer Experience* (DX).
+Diferente de bots de IA comuns, o **Sentinel NÃO utiliza IA para tomar decisões de bloqueio ou aprovação**. A Inteligência Artificial (podendo utilizar qualquer LLM, como Gemini, OpenAI ou Claude) é delegada **apenas à camada de apresentação**, atuando como um mentor que traduz logs de infrações técnicos para uma linguagem acessível aos desenvolvedores, melhorando a *Developer Experience* (DX).
 
 ---
 

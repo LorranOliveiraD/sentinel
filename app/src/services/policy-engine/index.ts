@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Motor de Política (Núcleo Determinístico)
+// Sentinel — Motor de Política (Núcleo Determinístico)
 // ─────────────────────────────────────────────
 // ⚠️ RESTRIÇÃO CRÍTICA: IA É PROIBIDA NESTE MÓDULO
 //
@@ -157,7 +157,7 @@ function generateSummary(
 
   const failedRules = ruleResults.filter((r) => !r.passed).map((r) => r.rule);
 
-  let summary = `${emoji} **Sentinel V3 — ${actionLabel}** (Risk Score: ${score}/100)\n\n`;
+  let summary = `${emoji} **Sentinel — ${actionLabel}** (Risk Score: ${score}/100)\n\n`;
 
   if (findings.length === 0) {
     summary += 'No issues found. This PR looks clean.';

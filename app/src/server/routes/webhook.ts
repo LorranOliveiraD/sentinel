@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Rotas de Webhook
+// Sentinel — Rotas de Webhook
 // ─────────────────────────────────────────────
 
 import { Router } from 'express';

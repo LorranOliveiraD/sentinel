@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Fluxo de Override
+// Sentinel — Fluxo de Override
 // ─────────────────────────────────────────────
 
 import { eventBus } from '../core/event-bus.js';

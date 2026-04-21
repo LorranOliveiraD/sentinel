@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Conexão com Banco de Dados (Knex)
+// Sentinel — Conexão com Banco de Dados (Knex)
 // ─────────────────────────────────────────────
 
 import knex, { type Knex } from 'knex';

@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Carregador de Configuração da Aplicação
+// Sentinel — Carregador de Configuração da Aplicação
 // ─────────────────────────────────────────────
 
 import dotenv from 'dotenv';

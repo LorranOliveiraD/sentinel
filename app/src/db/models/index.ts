@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Modelos do Banco de Dados
+// Sentinel — Modelos do Banco de Dados
 // ─────────────────────────────────────────────
 
 import { getDatabase } from '../connection.js';

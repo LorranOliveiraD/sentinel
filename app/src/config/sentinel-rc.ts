@@ -1,5 +1,5 @@
 // ─────────────────────────────────────────────
-// Sentinel V3 — Parser do .sentinelrc.yml
+// Sentinel — Parser do .sentinelrc.yml
 // ─────────────────────────────────────────────
 
 import fs from 'node:fs';
