@@ -7,7 +7,7 @@
 
 O **Sentinel V3** é um sistema avançado de *PR Guardrail* (Guarda-Corpo de Pull Requests) e Motor de Inteligência de Engenharia. Ele orquestra análises estáticas determinísticas de código e métricas DORA, aplicando políticas estritas de segurança (ex: bloqueio de *hardcoded secrets* e *CVEs*) de forma autônoma e inflexível.
 
-Diferente de bots de IA comuns, o **Sentinel V3 NÃO utiliza IA para tomar decisões de bloqueio ou aprovação**. A Inteligência Artificial (via Anthropic Claude) é delegada **apenas à camada de apresentação**, atuando como um mentor que traduz logs de infrações técnicos para uma linguagem acessível aos desenvolvedores, melhorando a *Developer Experience* (DX).
+Diferente de bots de IA comuns, o **Sentinel V3 NÃO utiliza IA para tomar decisões de bloqueio ou aprovação**. A Inteligência Artificial (podendo utilizar qualquer LLM, como Gemini, OpenAI ou Claude) é delegada **apenas à camada de apresentação**, atuando como um mentor que traduz logs de infrações técnicos para uma linguagem acessível aos desenvolvedores, melhorando a *Developer Experience* (DX).
 
 ---
 
@@ -33,7 +33,7 @@ graph TD
         PRFlow --> API[GitHub API]
         PRFlow --> Policy[Policy Engine \n Determinístico]
         Policy --> DB[(SQLite / PostgreSQL)]
-        Policy -->|Se Block| Claude[Claude AI \n Explicação]
+        Policy -->|Se Block| LLM[LLM AI \n Explicação]
     end
 
     %% Notification Layer
@@ -66,7 +66,7 @@ Cada PR recebe um *Risk Score* de 0 a 100.
 - **Linguagem:** TypeScript (Strict Mode, ES2022)
 - **Runtime:** Node.js v20+
 - **Banco de Dados:** Knex.js conectado a SQLite (Dev) ou PostgreSQL (Prod)
-- **Integrações:** `@octokit/rest` (GitHub), `@slack/bolt` (Slack), `@anthropic-ai/sdk` (Claude)
+- **Integrações:** `@octokit/rest` (GitHub), `@slack/bolt` (Slack), Integrações de IA (Google Gemini, expansível para qualquer LLM)
 - **Testes:** Vitest (Testes Unitários e de Fluxo)
 
 ---
@@ -77,7 +77,7 @@ Cada PR recebe um *Risk Score* de 0 a 100.
 - Node.js >= 20.x
 - Conta de Serviço do GitHub (Token Classic/Fine-grained)
 - App do Slack (Bot Token e Signing Secret)
-- API Key da Anthropic (Claude 3.5 Sonnet)
+- API Key de uma IA (Atualmente usa Google Gemini, mas a arquitetura suporta qualquer LLM)
 
 ### 2. Configuração do Ambiente
 Crie um arquivo `.env` na raiz do diretório `app/` baseado no `.env.example`:
@@ -90,7 +90,7 @@ Preencha os valores críticos:
 ```env
 GITHUB_WEBHOOK_SECRET=sua-chave-criptografica-webhook
 GITHUB_TOKEN=ghp_...
-ANTHROPIC_API_KEY=sk-ant-...
+GOOGLE_API_KEY=sua-chave-api-da-llm
 SLACK_BOT_TOKEN=xoxb-...
 SLACK_SIGNING_SECRET=sua-assinatura-slack
 ```
