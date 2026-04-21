@@ -1,0 +1,35 @@
+# ─────────────────────────────────────────────
+# Sentinel V3 — Default Repository Configuration
+# ─────────────────────────────────────────────
+# Place this file at the root of your repository as .sentinelrc.yml
+# to customize Sentinel's behavior for this repo.
+
+# Risk score thresholds (0-100)
+# - Below warn: PR passes silently
+# - Between warn and block: PR gets a warning comment
+# - At or above block: PR gets blocked with detailed explanation
+risk_score_warn: 40
+risk_score_block: 90
+
+# Minimum test coverage percentage expected
+min_test_coverage: 80
+
+# PRs exceeding this total changed lines count are flagged as "large"
+large_pr_lines: 500
+
+# Rules to disable (comment out to enable all)
+# disabled_rules:
+#   - pr_size
+
+# File patterns to exclude from analysis (glob syntax)
+exclude_patterns:
+  - "*.lock"
+  - "*.min.js"
+  - "*.min.css"
+  - "package-lock.json"
+  - "yarn.lock"
+  - "pnpm-lock.yaml"
+
+# Custom secret patterns (regex) — added on top of built-in patterns
+# custom_secret_patterns:
+#   - "INTERNAL_API_KEY_[A-Za-z0-9]{32}"

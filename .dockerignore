@@ -1,0 +1,14 @@
+.venv
+.git
+__pycache__
+*.pyc
+terraform/.terraform
+
+# Node.js
+node_modules
+dist
+.env
+data
+tests
+*.md
+*.sqlite

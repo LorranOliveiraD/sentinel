@@ -1,0 +1,70 @@
+# ─────────────────────────────────────────────
+# Sentinel V3 — Docker Compose
+# ─────────────────────────────────────────────
+# SEGURANÇA: Todas as credenciais são lidas de variáveis de ambiente.
+# Configure um arquivo .env na mesma pasta com as chaves necessárias.
+# ─────────────────────────────────────────────
+
+services:
+  sentinel-app:
+    build:
+      context: ..
+      dockerfile: Dockerfile
+    container_name: sentinel-v3
+    restart: unless-stopped
+    ports:
+      - "${PORT:-3000}:3000"
+    environment:
+      NODE_ENV: production
+      PORT: 3000
+      LOG_LEVEL: ${LOG_LEVEL:-info}
+      DATABASE_URL: postgresql://sentinel:${POSTGRES_PASSWORD:?Defina POSTGRES_PASSWORD no .env}@postgres:5432/sentinel_v3
+      GITHUB_WEBHOOK_SECRET: ${GITHUB_WEBHOOK_SECRET:?Defina GITHUB_WEBHOOK_SECRET no .env}
+      GITHUB_TOKEN: ${GITHUB_TOKEN:?Defina GITHUB_TOKEN no .env}
+      ANTHROPIC_API_KEY: ${ANTHROPIC_API_KEY}
+      GOOGLE_API_KEY: ${GOOGLE_API_KEY}
+      SLACK_BOT_TOKEN: ${SLACK_BOT_TOKEN}
+      SLACK_SIGNING_SECRET: ${SLACK_SIGNING_SECRET}
+      SLACK_CHANNEL_ALERTS: ${SLACK_CHANNEL_ALERTS:-sentinel-alerts}
+      SLACK_CHANNEL_REPORTS: ${SLACK_CHANNEL_REPORTS:-sentinel-reports}
+      WEEKLY_REPORT_CRON: ${WEEKLY_REPORT_CRON:-0 9 * * 1}
+    depends_on:
+      postgres:
+        condition: service_healthy
+    networks:
+      - sentinel-net
+    healthcheck:
+      test: ["CMD", "wget", "-qO-", "http://localhost:3000/health"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+
+  postgres:
+    image: postgres:16-alpine
+    container_name: sentinel-postgres
+    restart: unless-stopped
+    environment:
+      POSTGRES_DB: sentinel_v3
+      POSTGRES_USER: sentinel
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Defina POSTGRES_PASSWORD no .env}
+    ports:
+      - "${POSTGRES_PORT:-5432}:5432"
+    volumes:
+      - sentinel-pgdata:/var/lib/postgresql/data
+    networks:
+      - sentinel-net
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U sentinel -d sentinel_v3"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 10s
+
+networks:
+  sentinel-net:
+    driver: bridge
+
+volumes:
+  sentinel-pgdata:
+    driver: local
