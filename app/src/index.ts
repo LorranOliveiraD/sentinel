@@ -43,6 +43,9 @@ async function main(): Promise<void> {
   logger.info('  🛡️  Sentinel — Guardrail Inteligente de PR');
   logger.info('─────────────────────────────────────────────');
   logger.info({ env: config.nodeEnv, port: config.port }, 'Iniciando...');
+  
+  // TESTE SENTINEL: Adicionando log manual para validar o Guardrail
+  console.log('DEBUG: Sentinel Teste em execução...');
 
   // ── Passo 1: Banco de dados ──
   try {
